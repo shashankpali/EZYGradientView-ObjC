@@ -1,5 +1,14 @@
 # Change Log
 
+## [1.1.1](https://github.com/shashankpali/EZYGradientView-ObjC/releases/tag/1.1.1)
+Released on Thursday, 28 Jul, 2016.
+
+#### Added
+* clearColor to designated initializer.
+
+#### Updated
+* documentation.
+
 ## [1.1](https://github.com/shashankpali/EZYGradientView-ObjC/releases/tag/1.1)
 Released on Thursday, 28 Jul, 2016.
 

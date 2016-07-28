@@ -1,10 +1,24 @@
+// EZYGradientView.m
 //
-//  blurView.m
-//  testing
+// Copyright (c) 2016 Shashank Pali
 //
-//  Created by ABS_MAC01 on 25/07/16.
-//  Copyright © 2016 Shashank. All rights reserved.
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
 
 #import "EZYGradientView.h"
 
@@ -53,6 +67,7 @@ struct EZYLocations EZYLocationsMake(CGFloat firstColor, CGFloat secondColor)
   if (self)
   {
     [self defaultValueToProperties];
+    self.backgroundColor = [UIColor clearColor];
   }
   return self;
 }
@@ -63,6 +78,7 @@ struct EZYLocations EZYLocationsMake(CGFloat firstColor, CGFloat secondColor)
   if (self)
   {
     [self defaultValueToProperties];
+    self.backgroundColor = [UIColor clearColor];
   }
   return self;
 }
@@ -84,7 +100,7 @@ struct EZYLocations EZYLocationsMake(CGFloat firstColor, CGFloat secondColor)
   struct EZYLocations locations = [self locations];
   _gradientLayer.locations = @[@(locations.firstColor), @(locations.secondColor)];
   _blurView = nil;
-  if (_blur)
+  if (_isBlur)
   {
     _gradientLayer.colors = @[(id)[self blurColor:_firstColor], (id)[self blurColor:_secondColor]];
     [self insertSubview:self.blurView atIndex:0];
@@ -100,11 +116,11 @@ struct EZYLocations EZYLocationsMake(CGFloat firstColor, CGFloat secondColor)
   self.angleº = 0;
   _colorRatio = 0.5;
   _fadeIntensity = 0;
-  _blur = NO;
+  _isBlur = NO;
   _blurOpacity = 0;
 }
 
-#pragma mark - Helper
+#pragma mark - Helpers
 
 - (CGColorRef)blurColor:(UIColor *)color
 {
@@ -180,6 +196,42 @@ struct EZYLocations EZYLocationsMake(CGFloat firstColor, CGFloat secondColor)
   if (multiplier > 0)
   {
     _angleº = _angleº - 360 * multiplier;
+  }
+}
+
+- (void)setColorRatio:(CGFloat)colorRatio
+{
+  if (colorRatio <= 1 && colorRatio >= 0)
+  {
+    _colorRatio = colorRatio;
+  }
+  else
+  {
+    _colorRatio = 0.5;
+  }
+}
+
+- (void)setFadeIntensity:(CGFloat)fadeIntensity
+{
+  if (fadeIntensity <= 1 && fadeIntensity >= 0)
+  {
+    _fadeIntensity = fadeIntensity;
+  }
+  else
+  {
+    _fadeIntensity = 0.5;
+  }
+}
+
+- (void)setBlurOpacity:(CGFloat)blurOpacity
+{
+  if (blurOpacity <= 1 && blurOpacity >= 0)
+  {
+    _blurOpacity = blurOpacity;
+  }
+  else
+  {
+    _blurOpacity = 0.5;
   }
 }
 

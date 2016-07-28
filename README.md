@@ -17,9 +17,10 @@ This library attempts to create gradients intuitively. When you use `EZYGradient
 
 # Pod Installation 
 
-CocoaPods is the preferred way to install this library. Add this command to your `Podfile`:
+CocoaPods is the preferred way to install this library. Add both the command to your `Podfile`:
 
 ```
+use_frameworks!
 pod 'EZYGradientView-ObjC'
 ```
 
