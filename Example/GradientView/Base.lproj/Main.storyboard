@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Gradient View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GradientViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="174" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SFa-uz-7Kd">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="174" id="OiH-ER-IVG">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="174"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OiH-ER-IVG" id="2ev-pg-qVB">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="173"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1i-as-3Ap" customClass="EZYGradientView">
+                                                    <rect key="frame" x="20" y="10" width="560" height="153"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                                            <color key="value" red="1" green="0.97753510861865001" blue="0.0012503010419572247" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                                            <color key="value" red="0.37058007751983035" green="0.88684176338136222" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="angleº">
+                                                            <real key="value" value="-45"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="fadeIntensity">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="h1i-as-3Ap" secondAttribute="trailing" constant="20" id="T2f-BD-FDi"/>
+                                                <constraint firstAttribute="bottom" secondItem="h1i-as-3Ap" secondAttribute="bottom" constant="10" id="dWu-n9-C6c"/>
+                                                <constraint firstItem="h1i-as-3Ap" firstAttribute="leading" secondItem="2ev-pg-qVB" secondAttribute="leading" constant="20" id="fgp-U0-jtg"/>
+                                                <constraint firstItem="h1i-as-3Ap" firstAttribute="top" secondItem="2ev-pg-qVB" secondAttribute="top" constant="10" id="unc-1v-EVb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="BZf-OB-Gfv"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="KpF-xz-4Pg"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ofw-di-fMV" customClass="EZYGradientView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <color key="backgroundColor" red="0.61669412700000004" green="1" blue="0.82078776939999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="x0e-Vk-2xS"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" red="1" green="0.82404115700000002" blue="0.99191702110000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" red="0.6313635084" green="0.66669606120000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="angleº">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="colorRatio">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fadeIntensity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="blur" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="blurOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBlur" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJg-4V-0GE" customClass="EZYGradientView">
+                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="WSe-G1-YIg"/>
+                                    <constraint firstAttribute="width" secondItem="aJg-4V-0GE" secondAttribute="height" multiplier="6:1" id="dmN-Py-XJc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" red="0.61669412704289872" green="1" blue="0.8207877694005552" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" red="0.70283503225867616" green="0.79130305013867541" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="angleº">
+                                        <real key="value" value="135"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="colorRatio">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fadeIntensity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="blur" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="blurOpacity">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBlur" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dmN-Py-XJc"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="SFa-uz-7Kd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1oX-bP-XNo"/>
+                            <constraint firstItem="SFa-uz-7Kd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5w6-QW-qxK"/>
+                            <constraint firstItem="Ofw-di-fMV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6hX-qQ-rTq"/>
+                            <constraint firstAttribute="trailing" secondItem="aJg-4V-0GE" secondAttribute="trailing" id="Bae-HN-KhU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aJg-4V-0GE" secondAttribute="bottom" id="Mcd-Ok-PzL"/>
+                            <constraint firstItem="Ofw-di-fMV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Sxy-NN-WhR"/>
+                            <constraint firstAttribute="trailing" secondItem="SFa-uz-7Kd" secondAttribute="trailing" id="ejV-z0-Wcf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SFa-uz-7Kd" secondAttribute="bottom" id="lJr-DI-Gnd"/>
+                            <constraint firstItem="aJg-4V-0GE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mUh-nL-DdO"/>
+                            <constraint firstItem="Ofw-di-fMV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="w54-FR-ak1"/>
+                            <constraint firstAttribute="trailing" secondItem="Ofw-di-fMV" secondAttribute="trailing" id="xty-bF-hhh"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Sxy-NN-WhR"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="ren-Ta-Leq">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="table" destination="SFa-uz-7Kd" id="brA-MB-Tle"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1823" y="166"/>
+        </scene>
+    </scenes>
+</document>
