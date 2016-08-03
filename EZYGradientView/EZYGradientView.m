@@ -83,7 +83,7 @@ struct EZYLocations EZYLocationsMake(CGFloat firstColor, CGFloat secondColor)
   return self;
 }
 
-#pragma mark - Draw Rect
+#pragma mark - Draw Rect with steps
 
 - (void)drawRect:(CGRect)rect
 {
@@ -93,17 +93,49 @@ struct EZYLocations EZYLocationsMake(CGFloat firstColor, CGFloat secondColor)
     _gradientLayer.frame = self.bounds;
     [self.layer insertSublayer:_gradientLayer atIndex:0];
   }
+  [self updateColors];
+  [self updatePoints];
+  [self updateLocations];
+  [self checkBlurStatusAndUpdateOpacity];
+}
+/**
+ *  Step 1
+ */
+- (void)updateColors
+{
   _gradientLayer.colors = @[(id)_firstColor.CGColor, (id)_secondColor.CGColor];
+}
+/**
+ *  Step 2
+ */
+- (void)updatePoints
+{
   struct EZYPoints points = [self startEndPoints];
   _gradientLayer.startPoint = points.start;
   _gradientLayer.endPoint = points.end;
+}
+/**
+ *  Step 3
+ */
+- (void)updateLocations
+{
   struct EZYLocations locations = [self locations];
   _gradientLayer.locations = @[@(locations.firstColor), @(locations.secondColor)];
-  _blurView = nil;
+}
+/**
+ *  Step 4
+ */
+- (void)checkBlurStatusAndUpdateOpacity
+{
   if (_isBlur)
   {
     _gradientLayer.colors = @[(id)[self blurColor:_firstColor], (id)[self blurColor:_secondColor]];
     [self insertSubview:self.blurView atIndex:0];
+  }
+  else
+  {
+    [_blurView removeFromSuperview];
+    _blurView = nil;
   }
 }
 
@@ -179,6 +211,24 @@ struct EZYLocations EZYLocationsMake(CGFloat firstColor, CGFloat secondColor)
 
 #pragma mark - Properties
 
+- (void)setFirstColor:(UIColor *)firstColor
+{
+  _firstColor = firstColor;
+  if (_gradientLayer != nil)
+  {
+    [self updateColors];
+  }
+}
+
+- (void)setSecondColor:(UIColor *)secondColor
+{
+  _secondColor = secondColor;
+  if (_gradientLayer != nil)
+  {
+    [self updateColors];
+  }
+}
+
 - (void)setAngleº:(CGFloat)angleº
 {
   _angleº = angleº;
@@ -197,6 +247,11 @@ struct EZYLocations EZYLocationsMake(CGFloat firstColor, CGFloat secondColor)
   {
     _angleº = _angleº - 360 * multiplier;
   }
+  
+  if (_gradientLayer != nil)
+  {
+    [self updatePoints];
+  }
 }
 
 - (void)setColorRatio:(CGFloat)colorRatio
@@ -208,6 +263,11 @@ struct EZYLocations EZYLocationsMake(CGFloat firstColor, CGFloat secondColor)
   else
   {
     _colorRatio = 0.5;
+  }
+  
+  if (_gradientLayer != nil)
+  {
+    [self updateLocations];
   }
 }
 
@@ -221,6 +281,11 @@ struct EZYLocations EZYLocationsMake(CGFloat firstColor, CGFloat secondColor)
   {
     _fadeIntensity = 0.5;
   }
+  
+  if (_gradientLayer != nil)
+  {
+    [self updateLocations];
+  }
 }
 
 - (void)setBlurOpacity:(CGFloat)blurOpacity
@@ -232,6 +297,11 @@ struct EZYLocations EZYLocationsMake(CGFloat firstColor, CGFloat secondColor)
   else
   {
     _blurOpacity = 0.5;
+  }
+  
+  if (_gradientLayer != nil)
+  {
+    [self checkBlurStatusAndUpdateOpacity];
   }
 }
 

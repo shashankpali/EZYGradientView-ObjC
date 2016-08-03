@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.2](https://github.com/shashankpali/EZYGradientView-ObjC/releases/tag/1.2)
+Released on Wednesday, 3 Aug, 2016.
+
+#### Fixed
+* Issue #1 solved: Doesn't update on changing properties.
+
 ## [1.1.1](https://github.com/shashankpali/EZYGradientView-ObjC/releases/tag/1.1.1)
 Released on Thursday, 28 Jul, 2016.
 

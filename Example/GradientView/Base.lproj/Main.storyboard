@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Blogger_Sans.otf">
+            <string>BloggerSans</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Gradient View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -64,8 +69,18 @@
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ofw-di-fMV" customClass="EZYGradientView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
-                                <color key="backgroundColor" red="0.61669412700000004" green="1" blue="0.82078776939999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EZYGradientView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MS-Ts-Ihb">
+                                        <rect key="frame" x="220" y="29" width="160" height="24"/>
+                                        <fontDescription key="fontDescription" name="BloggerSans" family="Blogger Sans" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="1MS-Ts-Ihb" secondAttribute="bottom" constant="11" id="IzI-Z0-RNV"/>
+                                    <constraint firstItem="1MS-Ts-Ihb" firstAttribute="centerX" secondItem="Ofw-di-fMV" secondAttribute="centerX" id="bBL-Sz-Yt5"/>
                                     <constraint firstAttribute="height" constant="64" id="x0e-Vk-2xS"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -91,19 +106,19 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isBlur" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJg-4V-0GE" customClass="EZYGradientView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ke-eB-Gwa" customClass="EZYGradientView">
                                 <rect key="frame" x="0.0" y="551" width="600" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="WSe-G1-YIg"/>
-                                    <constraint firstAttribute="width" secondItem="aJg-4V-0GE" secondAttribute="height" multiplier="6:1" id="dmN-Py-XJc"/>
+                                    <constraint firstAttribute="height" constant="49" id="akG-jU-82M"/>
+                                    <constraint firstAttribute="width" secondItem="0Ke-eB-Gwa" secondAttribute="height" multiplier="6:1" id="sU8-T9-YqP"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                        <color key="value" red="0.61669412704289872" green="1" blue="0.8207877694005552" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.61669412700000004" green="1" blue="0.82078776939999998" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                        <color key="value" red="0.70283503225867616" green="0.79130305013867541" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.7028350323" green="0.79130305010000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="angleº">
                                         <real key="value" value="135"/>
@@ -122,7 +137,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="dmN-Py-XJc"/>
+                                        <exclude reference="sU8-T9-YqP"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -132,14 +147,14 @@
                             <constraint firstItem="SFa-uz-7Kd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1oX-bP-XNo"/>
                             <constraint firstItem="SFa-uz-7Kd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5w6-QW-qxK"/>
                             <constraint firstItem="Ofw-di-fMV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6hX-qQ-rTq"/>
-                            <constraint firstAttribute="trailing" secondItem="aJg-4V-0GE" secondAttribute="trailing" id="Bae-HN-KhU"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aJg-4V-0GE" secondAttribute="bottom" id="Mcd-Ok-PzL"/>
                             <constraint firstItem="Ofw-di-fMV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Sxy-NN-WhR"/>
                             <constraint firstAttribute="trailing" secondItem="SFa-uz-7Kd" secondAttribute="trailing" id="ejV-z0-Wcf"/>
+                            <constraint firstItem="0Ke-eB-Gwa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hGK-yU-YJY"/>
+                            <constraint firstAttribute="trailing" secondItem="0Ke-eB-Gwa" secondAttribute="trailing" id="jAZ-jG-GUt"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SFa-uz-7Kd" secondAttribute="bottom" id="lJr-DI-Gnd"/>
-                            <constraint firstItem="aJg-4V-0GE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mUh-nL-DdO"/>
                             <constraint firstItem="Ofw-di-fMV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="w54-FR-ak1"/>
                             <constraint firstAttribute="trailing" secondItem="Ofw-di-fMV" secondAttribute="trailing" id="xty-bF-hhh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Ke-eB-Gwa" secondAttribute="bottom" id="zdD-P3-tGN"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -151,6 +166,7 @@
                         <nil key="title"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="navBarGradient" destination="Ofw-di-fMV" id="bjJ-J6-iMm"/>
                         <outlet property="table" destination="SFa-uz-7Kd" id="brA-MB-Tle"/>
                     </connections>
                 </viewController>

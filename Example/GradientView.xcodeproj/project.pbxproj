@@ -7,22 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BCD343A1D51BF3C00700EC5 /* Blogger_Sans.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6BCD34391D51BF3C00700EC5 /* Blogger_Sans.otf */; };
+		6BD0D78E1D51B38D00C2BFF8 /* EZYGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD0D78D1D51B38D00C2BFF8 /* EZYGradientView.m */; };
 		6CBDCA6F1D489114004135D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CBDCA611D489114004135D0 /* Assets.xcassets */; };
 		6CBDCA701D489114004135D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CBDCA621D489114004135D0 /* LaunchScreen.storyboard */; };
 		6CBDCA711D489114004135D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CBDCA641D489114004135D0 /* Main.storyboard */; };
-		6CBDCA721D489114004135D0 /* EZYGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBDCA681D489114004135D0 /* EZYGradientView.m */; };
 		6CBDCA731D489114004135D0 /* GradientViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBDCA6A1D489114004135D0 /* GradientViewAppDelegate.m */; };
 		6CBDCA741D489114004135D0 /* GradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBDCA6C1D489114004135D0 /* GradientViewController.m */; };
-		6CBDCA751D489114004135D0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CBDCA6D1D489114004135D0 /* Info.plist */; };
 		6CBDCA761D489114004135D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBDCA6E1D489114004135D0 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6BCD34391D51BF3C00700EC5 /* Blogger_Sans.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Blogger_Sans.otf; sourceTree = "<group>"; };
+		6BD0D78C1D51B38D00C2BFF8 /* EZYGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZYGradientView.h; sourceTree = "<group>"; };
+		6BD0D78D1D51B38D00C2BFF8 /* EZYGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZYGradientView.m; sourceTree = "<group>"; };
 		6CBDCA611D489114004135D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CBDCA631D489114004135D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6CBDCA651D489114004135D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6CBDCA671D489114004135D0 /* EZYGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZYGradientView.h; sourceTree = "<group>"; };
-		6CBDCA681D489114004135D0 /* EZYGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZYGradientView.m; sourceTree = "<group>"; };
 		6CBDCA691D489114004135D0 /* GradientViewAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientViewAppDelegate.h; sourceTree = "<group>"; };
 		6CBDCA6A1D489114004135D0 /* GradientViewAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientViewAppDelegate.m; sourceTree = "<group>"; };
 		6CBDCA6B1D489114004135D0 /* GradientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientViewController.h; sourceTree = "<group>"; };
@@ -43,30 +44,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6BD0D78B1D51B38D00C2BFF8 /* EZYGradientView */ = {
+			isa = PBXGroup;
+			children = (
+				6BD0D78C1D51B38D00C2BFF8 /* EZYGradientView.h */,
+				6BD0D78D1D51B38D00C2BFF8 /* EZYGradientView.m */,
+			);
+			name = EZYGradientView;
+			path = ../../EZYGradientView;
+			sourceTree = "<group>";
+		};
 		6CBDCA601D489114004135D0 /* GradientView */ = {
 			isa = PBXGroup;
 			children = (
-				6CBDCA611D489114004135D0 /* Assets.xcassets */,
-				6CBDCA621D489114004135D0 /* LaunchScreen.storyboard */,
-				6CBDCA641D489114004135D0 /* Main.storyboard */,
-				6CBDCA661D489114004135D0 /* EZYGradientView */,
+				6BD0D78B1D51B38D00C2BFF8 /* EZYGradientView */,
 				6CBDCA691D489114004135D0 /* GradientViewAppDelegate.h */,
 				6CBDCA6A1D489114004135D0 /* GradientViewAppDelegate.m */,
 				6CBDCA6B1D489114004135D0 /* GradientViewController.h */,
 				6CBDCA6C1D489114004135D0 /* GradientViewController.m */,
+				6CBDCA641D489114004135D0 /* Main.storyboard */,
+				6CBDCA611D489114004135D0 /* Assets.xcassets */,
+				6CBDCA621D489114004135D0 /* LaunchScreen.storyboard */,
 				6CBDCA6D1D489114004135D0 /* Info.plist */,
+				6BCD34391D51BF3C00700EC5 /* Blogger_Sans.otf */,
 				6CBDCA6E1D489114004135D0 /* main.m */,
 			);
 			path = GradientView;
-			sourceTree = "<group>";
-		};
-		6CBDCA661D489114004135D0 /* EZYGradientView */ = {
-			isa = PBXGroup;
-			children = (
-				6CBDCA671D489114004135D0 /* EZYGradientView.h */,
-				6CBDCA681D489114004135D0 /* EZYGradientView.m */,
-			);
-			path = EZYGradientView;
 			sourceTree = "<group>";
 		};
 		6CE67E141D45D7EE008700C4 = {
@@ -142,8 +145,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CBDCA751D489114004135D0 /* Info.plist in Resources */,
 				6CBDCA711D489114004135D0 /* Main.storyboard in Resources */,
+				6BCD343A1D51BF3C00700EC5 /* Blogger_Sans.otf in Resources */,
 				6CBDCA6F1D489114004135D0 /* Assets.xcassets in Resources */,
 				6CBDCA701D489114004135D0 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -157,7 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CBDCA741D489114004135D0 /* GradientViewController.m in Sources */,
-				6CBDCA721D489114004135D0 /* EZYGradientView.m in Sources */,
+				6BD0D78E1D51B38D00C2BFF8 /* EZYGradientView.m in Sources */,
 				6CBDCA761D489114004135D0 /* main.m in Sources */,
 				6CBDCA731D489114004135D0 /* GradientViewAppDelegate.m in Sources */,
 			);

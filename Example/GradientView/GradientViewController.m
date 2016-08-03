@@ -12,6 +12,7 @@
 @interface GradientViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *table;
+@property (weak, nonatomic) IBOutlet EZYGradientView *navBarGradient;
 
 @end
 
@@ -67,7 +68,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  
+
 }
 
 - (void)didReceiveMemoryWarning {
