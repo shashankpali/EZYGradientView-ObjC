@@ -101,7 +101,7 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="blur" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="blurOpacity">
-                                        <real key="value" value="0.5"/>
+                                        <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isBlur" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -172,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1823" y="166"/>
+            <point key="canvasLocation" x="543" y="130"/>
         </scene>
     </scenes>
 </document>

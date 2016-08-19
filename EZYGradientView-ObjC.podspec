@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name              = 'EZYGradientView-ObjC'
-  s.version           = '1.2'
+  s.version           = '1.3'
   s.platform          = :ios, '8.0'
   s.license           = { :type => 'MIT' }
   s.homepage          = 'https://github.com/shashankpali/EZYGradientView-ObjC'

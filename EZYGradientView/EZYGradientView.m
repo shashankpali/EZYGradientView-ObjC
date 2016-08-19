@@ -52,7 +52,6 @@ struct EZYLocations EZYLocationsMake(CGFloat firstColor, CGFloat secondColor)
 
 @interface EZYGradientView ()
 
-@property (strong, nonatomic) CAGradientLayer *gradientLayer;
 @property (strong, nonatomic) UIVisualEffectView *blurView;
 
 @end
@@ -130,11 +129,12 @@ struct EZYLocations EZYLocationsMake(CGFloat firstColor, CGFloat secondColor)
   if (_isBlur)
   {
     _gradientLayer.colors = @[(id)[self blurColor:_firstColor], (id)[self blurColor:_secondColor]];
-    [self insertSubview:self.blurView atIndex:0];
+    [self.layer insertSublayer:self.blurLayer below:_gradientLayer];
   }
   else
   {
-    [_blurView removeFromSuperview];
+    [_blurLayer removeFromSuperlayer];
+    _blurLayer = nil;
     _blurView = nil;
   }
 }
@@ -305,7 +305,7 @@ struct EZYLocations EZYLocationsMake(CGFloat firstColor, CGFloat secondColor)
   }
 }
 
-- (UIVisualEffectView *)blurView
+- (CALayer *)blurLayer
 {
   if (_blurView == nil)
   {
@@ -313,10 +313,12 @@ struct EZYLocations EZYLocationsMake(CGFloat firstColor, CGFloat secondColor)
     blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
     _blurView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
     _blurView.frame = self.bounds;
+    _blurLayer = [CALayer layer];
+    _blurLayer = _blurView.layer;
     
-    return _blurView;
+    return _blurLayer;
   }
-  return _blurView;
+  return _blurLayer;
 }
 
 @end

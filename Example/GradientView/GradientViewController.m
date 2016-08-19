@@ -26,6 +26,13 @@
   _table.scrollIndicatorInsets = _table.contentInset;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+  [super viewDidAppear:animated];
+  _navBarGradient.blurLayer.cornerRadius = _navBarGradient.frame.size.width/2;
+  _navBarGradient.blurLayer.masksToBounds = YES;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
   return 10;

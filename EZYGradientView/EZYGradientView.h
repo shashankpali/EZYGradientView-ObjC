@@ -27,6 +27,14 @@ IB_DESIGNABLE
 @interface EZYGradientView : UIView
 
 /**
+ *  Gradient layer provide canvas to draw gradient
+ */
+@property (strong, nonatomic) CAGradientLayer *gradientLayer;
+/**
+ *  Blur layer allow to customize the blur effect
+ */
+@property (strong, nonatomic) CALayer *blurLayer;
+/**
  *  First color of gradient i.e. it appears on top when angleº set to 0.0.
  */
 @property (strong, nonatomic) IBInspectable UIColor *firstColor;
