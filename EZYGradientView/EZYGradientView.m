@@ -81,6 +81,11 @@ struct EZYLocations EZYLocationsMake(CGFloat firstColor, CGFloat secondColor)
   }
   return self;
 }
+// Fixed gradient change on bouns change
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    _gradientLayer.frame = self.bounds;
+}
 
 #pragma mark - Draw Rect with steps
 
