@@ -82,6 +82,13 @@ struct EZYLocations EZYLocationsMake(CGFloat firstColor, CGFloat secondColor)
   return self;
 }
 
+- (void)layoutSubviews
+{
+  [super layoutSubviews];
+
+  [self setNeedsDisplay];
+}
+
 #pragma mark - Draw Rect with steps
 
 - (void)drawRect:(CGRect)rect
