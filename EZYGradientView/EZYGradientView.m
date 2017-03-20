@@ -82,6 +82,13 @@ struct EZYLocations EZYLocationsMake(CGFloat firstColor, CGFloat secondColor)
   return self;
 }
 
+- (void)layoutSubviews
+{
+  [super layoutSubviews];
+
+  [self setNeedsDisplay];
+}
+
 #pragma mark - Draw Rect with steps
 
 - (void)drawRect:(CGRect)rect
@@ -89,9 +96,9 @@ struct EZYLocations EZYLocationsMake(CGFloat firstColor, CGFloat secondColor)
   if (_gradientLayer == nil)
   {
     _gradientLayer = [CAGradientLayer layer];
-    _gradientLayer.frame = self.bounds;
     [self.layer insertSublayer:_gradientLayer atIndex:0];
   }
+  _gradientLayer.frame = self.bounds;
   [self updateColors];
   [self updatePoints];
   [self updateLocations];
